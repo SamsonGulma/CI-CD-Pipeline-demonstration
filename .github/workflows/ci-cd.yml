@@ -2,9 +2,12 @@ name: CI/CD Pipeline (React + Vite)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
@@ -12,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x] # your app runtime (not the action runtime)
 
     steps:
       - name: Checkout repository
@@ -22,10 +25,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Linter
         run: npm run lint
@@ -45,11 +48,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Download build artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: vite-build
           path: dist
 
       - name: Deploy (placeholder)
-        run: echo "Deploy your app here (Netlify, Vercel, etc.)"
+        run: echo "Deploy step here (Netlify, Vercel, etc.)"
