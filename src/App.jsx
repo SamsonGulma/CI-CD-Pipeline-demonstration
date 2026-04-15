@@ -37,7 +37,7 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#documentation-icon"></use>
           </svg>
-          <h2>We demonstrate the CI/CD on the following the stacks</h2>
+          <h2>We demonstrate the CI/CD on the following stack(s)</h2>
           <p>React / Vite</p>
           <ul>
             <li>
