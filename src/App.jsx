@@ -68,7 +68,7 @@ function App() {
                   aria-hidden="true"
                 >
                 </svg>
-               <p>Samson Gulma</p>
+               <p>Samson Gulma (Presenter)</p>
               </a>
             </li>
             <li>
