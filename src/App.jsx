@@ -19,6 +19,12 @@ function App() {
           <h1>Introduction to DevOps</h1>
           <p>
             Bridging the Gap Between <code>Development</code> and <code>IT Operations</code> 
+            
+ 
+          </p>
+          <p>
+            Thank you for listening, Mr. Dawit
+            
  
           </p>
         </div>
